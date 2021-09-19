@@ -8,14 +8,8 @@ html(lang="en")
         link(rel="stylesheet", href="/css/main.css")
         link(rel="stylesheet", href="/css/product.css")
         link(rel="stylesheet",href="/css/form.css")
+        include ../includes/navigation.pug
     body 
-        header.header
-            nav.nav-header
-                ul.main_header_itemList
-                    li.main_header_item
-                        a(href="/") Shop
-                    li.main_header_item
-                        a.active(href="/admin/add-product") Add Product
         main
             form.product-form(action="/admin/add-product",method='POST') 
                 div.form-control

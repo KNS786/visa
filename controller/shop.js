@@ -4,7 +4,7 @@ const getProducts=Product.FetchAll();
 exports.getProducts =(req, res, next) => {
     res.render('shop/product-list',{
         products:getProducts,
-        pageTitle:'allproducts',
+        pageTitle:'All Products',
         path:'/products'
     });  
 }
@@ -12,6 +12,7 @@ exports.getProducts =(req, res, next) => {
 exports.getProductIndex=(req,res,next)=>{
     res.render('shop/index',{
         products:getProducts,
+        pageTitle:'Shop',
         path:'/'
     });  
 }

@@ -3,7 +3,8 @@ const getProducts=Product.FetchAll();
 
 exports.getProduct=(req, res, next) => {
     res.render('admin/add-product',{
-        path:'admin/add-product'
+        pageTitle:'Add Product',
+        path:'/admin/add-product'
     })
 }
 
@@ -19,7 +20,7 @@ exports.postProduct=(req, res, next) => {
 }
 
 exports.getAdminProducts=(req,res,next)=>{
-    res.render('shop/',{
+    res.render('admin/products',{
         products:getProducts,
         pageTitle:'Admin Products',
         path:'/admin/products'

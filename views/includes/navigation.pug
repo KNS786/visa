@@ -4,20 +4,21 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title My Shop 
+        title #{pageTitle}
         link(rel="stylesheet", href="/css/main.css")
     body 
+    
         header.header
             nav.nav-header
                 ul.main_header_itemList
                     li.main_header_item
-                        a(href="/") Shop
+                        a(class=path==='/'?'active':'',href="/") Shop
                     li.main_header_item
-                        a(href="/products") Products
+                        a(class=path==='/products' ? 'active':'',href="/products") Products
                     li.main_header_item
-                        a(href="/cart") Cart 
+                        a(class=path==='/cart'?'active':'',href="/cart") Cart 
                     li.main_header_item
-                        a(href="/admin/add-product") Add Product
+                        a(class=path==='/admin/add-product'?'active':'',href="/admin/add-product") Add Product
                     li.main_header_item
-                        a(href="/admin/products") Admin Products 
+                        a(class=path==='/admin/products'?'active':'',href="/admin/products") Admin Products 
         

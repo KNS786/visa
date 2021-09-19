@@ -18,9 +18,10 @@ html(lang="en")
                             header.card__header    
                                 h1.product__title #{product.title}
                             div.card__image
-                                img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxrHz9SDVYdPiANhqslrcJAczUZ0UPqc0SxA&usqp=CAU", alt="A Book") 
+                                img(src=product.imgUrl, alt="A Book") 
                             div.card__content
-                                h2.product__price $89.21
+                                h2.product__price  $#{product.price}
+                                p.product__description  #{product.description}
                             .card__actions
                                 button.btn Add to Card 
             else 
